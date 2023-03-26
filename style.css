@@ -1,0 +1,779 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&family=Satisfy&family=Sono:wght@300&display=swap');
+
+
+:root {
+    --reddish-orange: #D0604C;
+    --brownish-grey: #6C4D3F;
+    --light-orange: #ffbc82;
+    --light-pink: #E8D2C4;
+    --light-pink2: #f4e4d4;
+    --regal-blue: #034378;
+    --light-blue: #b0c3d0;
+    --satisfy-font: 'Satisfy', cursive;
+    --poppins-font: 'Poppins', sans-serif;
+    --sono-font: 'Sono', sans-serif;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: y;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0;
+}
+
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 4vw auto 8vw;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/13;
+    grid-row: 1/2;
+    background-color: #171717;
+}
+
+header>img {
+    width: 32vw;
+    height: 3.5vw;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 3.5vw repeat(6, min-content);
+    grid-column: 1/13;
+    grid-row: 2/3;
+    background-color: whitesmoke;
+    row-gap: 1rem;
+}
+
+main>nav {
+    grid-column: 1/13;
+    grid-row: 1/2;
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #3e4852;
+    grid-column: 1/13;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: row;
+    padding: 12px 12vw 12px 12vw;
+    gap: calc(100vw - ((12vw*2) + (15vw + 40vw)));
+}
+
+footer .logo-sec {
+    width: 15vw;
+    background-image: url(/all_images/Artboard\ 19.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+footer .copyright-sec {
+    display: flex;
+    width: 40vw;
+    font-family: var(--sono-font);
+    color: whitesmoke;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-size: clamp(0.7rem, 1.3vw, 1.5vw);
+}
+
+
+nav>ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(99, 98, 98);
+    padding: 0;
+    margin: 0;
+    font-size: clamp(0.5rem, 1.2vw, 1.2vw);
+    font-family: var(--poppins-font);
+    flex-direction: row;
+    list-style-type: none;
+    gap: 3.3vw;
+    user-select: none;
+}
+
+nav>ul>li {
+    position: relative;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+nav>ul>li::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.1em;
+    background-color: #d9232d;
+    transform: scaleX(0);
+    transition: transform 450ms ease-in-out;
+    transform-origin: left;
+}
+
+nav>ul>li:hover {
+    color: #d9232d;
+}
+
+nav>ul>li:hover::after {
+    transform: scaleX(1);
+}
+
+.welcometxtandimg {
+    grid-row: 2/3;
+    grid-column: 1/13;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15vw;
+    margin-bottom: -1rem;
+}
+
+.welcome-txt {
+    display: flex;
+    height: fit-content;
+    width: 27vw;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.welcome-txt>p {
+    margin: 0;
+    color: #171717;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.4vw;
+    user-select: none;
+    cursor: default;
+}
+
+main>section {
+    display: flex;
+}
+
+.welcome-img {
+    width: 33.4vw;
+    height: 22vw;
+    border-radius: max(0.9vw, 21px);
+    margin: 0;
+    align-self: center;
+    background-image: url(/all_images/DALL·E\ 2023-03-27\ 02.22.31\ -\ generate\ same\ color\ background\ final.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.promotion-banner {
+    display: grid !important;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 11vw calc(50vw - 11vw);
+    padding: 15px 12vw 15px 12vw;
+    grid-column: 1/13;
+    grid-row: 3/4;
+    height: auto;
+    background-color: #ccd2dd;
+    column-gap: 3vw;
+}
+
+.promotion-banner>p {
+    user-select: none;
+    cursor: default;
+}
+
+.promotion-banner>p:not(.promotion-txt) {
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0;
+    height: fit-content;
+    width: 39vw;
+    font-family: var(--poppins-font);
+    font-size: 3.1vw;
+    justify-content: center;
+}
+
+.promotion-img {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    width: 34vw;
+    height: 50vw;
+    overflow: hidden;
+    background-image: url(/all_images/chandri-anggara--gt7_Chu0lE-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    border-radius: 1.9vw;
+    justify-self: flex-start;
+}
+
+.promotion-txt {
+    font-family: 'Sono', sans-serif;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: rgb(0, 0, 0);
+    font-size: 2vw;
+    margin: 0;
+    align-self: flex-start;
+    margin-top: 1.3vw;
+    width: 39vw;
+}
+
+.our-services {
+    grid-column: 1/13;
+    grid-row: 4/5;
+    padding: 1vw;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.our-services>span {
+    margin: 0;
+    width: fit-content;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.9rem, 2.1vw, 2.1vw);
+    user-select: none;
+    cursor: default;
+    position: relative;
+}
+
+.our-services>span::after {
+    content: '';
+    position: absolute;
+    background-color: #171717;
+    height: 0.1em;
+    top: 1.25em;
+    left: 0;
+    right: 0;
+    border-radius: 5em;
+    transform: scaleX(0);
+    transition: transform 450ms ease-in-out;
+    transform-origin: left;
+}
+
+.our-services>span:hover::after {
+    transform: scaleX(1);
+}
+
+.services-cards {
+    background-color: #171717;
+    border: #171717 solid 0.5vw;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    gap: 0.5vw;
+    box-sizing: border-box;
+    overflow-x: scroll;
+}
+
+.services-cards>div {
+    background-color: #f5f5f5;
+    width: clamp(161px, 24vw, 24vw);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 0 1vw 1vw;
+    gap: 14vw;
+    flex-shrink: 0;
+}
+
+.services-cards>div>label {
+    font-family: 'Satisfy', cursive;
+    font-size: clamp(1.5em, 3vw, 3vw);
+    user-select: none;
+}
+
+.services-cards>div>button {
+    padding: 0 0 0 0;
+    padding-left: clamp(5px, 5%, 10%);
+    width: 20vw;
+    height: 5vw;
+    border-radius: 50px;
+    border: #171717 solid 2px;
+    background-color: #171717;
+    color: #f5f5f5;
+    font-size: clamp(0.4em, 1.6vw, 1.7vw);
+    position: relative;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.btn-services::after {
+    position: absolute;
+    content: '';
+    width: clamp(3vw, 3.5vw, 3.5vw);
+    aspect-ratio: 1/1;
+    top: min(12%, 16%);
+    left: max(78%, 81%);
+    background: url(/all_images/icon_right_512px.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.our-team {
+    grid-column: 1/13;
+    grid-row: 5/6;
+    background-color: #171717;
+    padding: 1vw;
+    gap: 1vw;
+    flex-direction: column;
+}
+
+.our-team>span {
+    margin: 0;
+    width: fit-content;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.9rem, 2.1vw, 2.1vw);
+    user-select: none;
+    cursor: default;
+    position: relative;
+    color: #d9232d;
+}
+
+.our-team>span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #d9232d;
+    height: 0.1em;
+    top: 1.25em;
+    left: 0;
+    right: 0;
+    border-radius: 5em;
+    transform: scaleX(0);
+    transition: transform 450ms ease-in-out;
+    transform-origin: left;
+}
+
+.our-team>span:hover::after {
+    transform: scaleX(1);
+}
+
+.our-team-cards-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2vw;
+}
+
+.our-team-cards {
+    width: 26vw;
+    aspect-ratio: 1/1;
+    border-radius: 0.5em;
+    background-color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-cards3 {
+    width: 42vw !important;
+    aspect-ratio: 1/0.62 !important;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 1vw 0 10px 10px;
+    background-color: whitesmoke;
+    top: 87%;
+    left: 0;
+    right: 0;
+    color: #272626;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup-3 {
+    top: 90%;
+}
+
+.pria-title,
+.garry-title {
+    margin-bottom: 1vw !important;
+    font-size: 1.6vw !important;
+}
+
+.popup p {
+    font-family: var(--sono-font);
+    margin: 0;
+    font-size: 1.2vw;
+    user-select: none;
+    cursor: default;
+}
+
+.wrapper1 {
+    background-image: url(/all_images/cheerful-curly-business-girl-wearing-glasses.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.wrapper2 {
+    background-image: url(/all_images/young-man-looking-bewildered-astonished-with-hand-forehead-looking-far-away-watching-searching_1194-151520.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.wrapper3 {
+    background-image: url(/all_images/work-barbershop-two-masters-work_199620-5130.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.know-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--sono-font);
+    position: relative;
+    width: 18vw;
+    aspect-ratio: 1/0.2;
+    font-size: 1.34vw;
+    border-radius: 0;
+    padding-left: 2vw;
+    margin-top: 1vw;
+    background-color: #171717;
+    color: var(--light-blue);
+    border: 0;
+}
+
+.know-more-btn::after {
+    content: '';
+    position: absolute;
+    background-image: url(/all_images/arrow-straight-right.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 1.5vw;
+    height: 0.8vw;
+    top: 37%;
+    left: 65%;
+}
+
+.our-team-cards:hover .wrap {
+    filter: blur(0.1rem);
+}
+
+.our-team-cards:hover .popup-1 {
+    top: 38%;
+    bottom: 0;
+}
+
+.our-team-cards:hover .popup-2 {
+    top: 67%;
+    bottom: 0;
+}
+
+.our-team-cards:hover .popup-3 {
+    top: 32%;
+    bottom: 0;
+}
+
+.our-team>section {
+    width: 100%;
+}
+
+.booking-watchTute {
+    grid-column: 1/13;
+    grid-row: 6/7;
+    background-color: #171717;
+    flex-direction: row;
+    padding: 0.5vw;
+    gap: 0.5vw;
+}
+
+.booking-watchTute hr {
+    border: 0.01em solid whitesmoke;
+}
+
+.booking-watchTute section {
+    width: 50%;
+    padding: 0.5vw 0 0.5vw 0.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    font-family: var(--sono-font);
+    font-size: 1.2vw;
+    user-select: none;
+    cursor: default;
+    color: white;
+}
+
+.booking-watchTute section>p {
+    margin: 0;
+}
+
+.booking-watchTute section>button {
+    background-color: #d9232d;
+    color: whitesmoke;
+    border: 1px solid #171717;
+    width: 8.5vw;
+    height: 2vw;
+    font-family: var(--sono-font);
+    font-size: 1vw;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+}
+
+.booking-watchTute section>button:hover {
+    opacity: .8;
+}
+
+.explore-now-btn {
+    width: clamp(9em, 8.5vw, 8.5vw) !important;
+}
+
+* button {
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+    cursor: pointer;
+}
+
+* button:hover {
+    opacity: .8;
+}
+
+.address-timing-socials {
+    grid-column: 1/13;
+    grid-row: 7/8;
+    padding: 1.2vw;
+    display: flex;
+    flex-direction: row;
+    background-color: #515d6a;
+    gap: 1vw;
+}
+
+.address-timing-socials section {
+    width: calc(100vw - (1vw*4));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.address-timing-socials hr {
+    border: 0.01em solid whitesmoke;
+}
+
+.address-timing-socials section h5 {
+    margin: 0vw;
+    font-family: var(--sono-font);
+    text-decoration: underline;
+}
+
+.address-timing-socials section p {
+    margin: 0;
+    color: whitesmoke;
+    font-family: var(--sono-font);
+}
+
+.address-timing-socials section a {
+    color: whitesmoke;
+    font-family: var(--sono-font);
+    text-decoration: none;
+}
+
+.socials-sec a:link {
+    color: whitesmoke;
+}
+
+.socials-sec a:visited {
+    color: #f26046;
+}
+
+
+@media screen and (max-width: 600px) {
+    .welcometxtandimg {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1vw;
+    }
+
+    .welcome-txt {
+        width: 72vw;
+    }
+
+    .welcome-txt>p {
+        font-size: 6.4vw;
+    }
+
+    .welcome-img {
+        width: 63.4vw;
+        height: 42vw;
+    }
+
+    .welcome-img>img {
+        width: 25.4vw;
+        height: 18vw;
+    }
+
+    .promotion-txt {
+        font-size: 2.6vw;
+    }
+
+    .promotion-banner {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        column-gap: 0;
+        padding: 15px 18vw 15px 18vw;
+    }
+
+    .promotion-img {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 50vw;
+        background-position: -14.9vw center;
+    }
+
+    .promotion-banner>p:not(.promotion-txt) {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        width: 64vw;
+        font-size: 4.1vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .promotion-txt {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        margin: 0;
+        width: 64vw;
+    }
+
+    .our-team-cards-sec {
+        flex-direction: column;
+        gap: 2.5vw;
+    }
+
+    .wrap {
+        width: 100% !important;
+    }
+
+    .our-team-cards-sec div {
+        margin: auto;
+        width: 58vw;
+    }
+
+    .popup p {
+        font-size: 2.6vw;
+    }
+
+    .popup {
+        width: 100% !important;
+    }
+
+    .pria-title,
+    .garry-title {
+        font-size: 3.1vw !important;
+        text-decoration: underline;
+    }
+
+    .team-cards3 {
+        width: 72vw !important;
+    }
+
+    .our-team-cards:hover .wrap {
+        filter: blur(0.1rem);
+    }
+
+    .our-team-cards:hover .popup-1 {
+        top: 45%;
+        bottom: 0;
+    }
+
+    .our-team-cards:hover .popup-2 {
+        top: 71%;
+        bottom: 0;
+    }
+
+    .our-team-cards:hover .popup-3 {
+        top: 11%;
+        bottom: 0;
+    }
+
+    .know-more-btn {
+        width: 21vw;
+        font-size: 2.1vw;
+    }
+
+    .know-more-btn::after {
+        width: 2.5vw;
+        height: 1.5vw;
+        top: 31%;
+        left: 74%;
+    }
+
+    .booking-watchTute {
+        flex-direction: column;
+    }
+
+    .booking-watchTute hr {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .booking-watchTute section {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 2.2vw;
+    }
+
+    .booking-watchTute section>button {
+        width: 11.5vw;
+        height: 3vw;
+        font-size: 1.9vw;
+    }
+
+    .address-timing-socials {
+        flex-direction: column;
+    }
+
+    .address-timing-socials hr {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .our-services>span {
+        margin: auto;
+    }
+
+    .our-team-title {
+        margin: auto !important;
+    }
+}
