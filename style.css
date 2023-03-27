@@ -540,7 +540,7 @@ main>section {
     background-color: #d9232d;
     color: whitesmoke;
     border: 1px solid #171717;
-    width: 8.5vw;
+    width: fit-content;
     height: 2vw;
     font-family: var(--sono-font);
     font-size: 1vw;
