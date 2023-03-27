@@ -540,7 +540,7 @@ main>section {
     background-color: #d9232d;
     color: whitesmoke;
     border: 1px solid #171717;
-    width: fit-content;
+    width: 8.5vw;
     height: 2vw;
     font-family: var(--sono-font);
     font-size: 1vw;
@@ -754,7 +754,7 @@ main>section {
     }
 
     .booking-watchTute section>button {
-        width: fit-content;
+        width: 12.5vw;
         height: 3vw;
         font-size: 1.9vw;
     }
