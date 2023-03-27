@@ -754,7 +754,7 @@ main>section {
     }
 
     .booking-watchTute section>button {
-        width: 12.5vw;
+        width: fit-content;
         height: 3vw;
         font-size: 1.9vw;
     }
