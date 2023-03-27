@@ -656,7 +656,7 @@ main>section {
         grid-row: 1/2;
         grid-column: 1/2;
         width: 50vw;
-        background-position: -14.9vw center;
+        background-position: center;
     }
 
     .promotion-banner>p:not(.promotion-txt) {
@@ -754,7 +754,7 @@ main>section {
     }
 
     .booking-watchTute section>button {
-        width: 11.5vw;
+        width: 12.5vw;
         height: 3vw;
         font-size: 1.9vw;
     }
